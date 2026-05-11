@@ -7,7 +7,7 @@
         </div>
         <div class="agenda-title">
           ${e.slug?`<a href="${e.slug}">${e.title}</a>`:e.title}
-          <span class="agenda-location">(${e.location})</span>
+          ${e.location?`<span class="agenda-location">(${e.location})</span>`:""}
         </div>
         ${e.distances?`<div class="agenda-distances">Distances : ${e.distances}</div>`:""}
       </div>
@@ -21,7 +21,7 @@
             </div>
             <div class="agenda-title">
               ${e.slug?`<a href="${e.slug}">${e.title}</a>`:e.title}
-              <span class="agenda-location">(${e.location})</span>
+              ${e.location?`<span class="agenda-location">(${e.location})</span>`:""}
             </div>
             ${e.distances?`<div class="agenda-distances">Distances : ${e.distances}</div>`:""}            
           </div>
